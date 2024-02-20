@@ -1,66 +1,46 @@
 /**
  * The Calculator class performs basic arithmetic operations such as addition, subtraction,
- * multiplication, and division on two float operands.
+ * multiplication, and division.
  */
-class Calculator{
+class Calculator extends Extended_Calculator{
 
-    /**
-     * The function "addition" takes two float operands and returns their sum.
-     * 
-     * @param operand_1 The first operand for addition. It is a float data type.
-     * @param operand_2 The second operand in the addition operation.
-     * @return The sum of operand_1 and operand_2.
-     */
-    float addition(float operand_1, float operand_2){
+    float addition(float  operand_1, float operand_2){
         return(operand_1 + operand_2);
     }
-
-    /**
-     * The function "substraction" takes two float operands and returns their difference.
-     * 
-     * @param operand_1 The first operand for the subtraction operation.
-     * @param operand_2 The second operand in the subtraction operation.
-     * @return the result of subtracting operand_2 from operand_1.
-     */
-    float substraction(float operand_1, float operand_2){
+    float substraction(float  operand_1, float operand_2){
         return(operand_1 - operand_2);
     }
-
-    /**
-     * The function "multiplication" takes two float operands and returns their product.
-     * 
-     * @param operand_1 The first operand of the multiplication operation. It is a floating-point
-     * number.
-     * @param operand_2 The second operand in the multiplication operation.
-     * @return The product of operand_1 and operand_2 is being returned.
-     */
-    float multiplication(float operand_1, float operand_2){
+    float multiplication(float  operand_1, float operand_2){
         return(operand_1 * operand_2);
     }
-
-    /**
-     * The division function takes two float operands and returns their quotient.
-     * 
-     * @param operand_1 The first operand of the division operation.
-     * @param operand_2 The second operand in the division operation.
-     * @return the result of dividing operand_1 by operand_2.
-     */
-    float division(float operand_1, float operand_2){
+    float division(float  operand_1, float operand_2){
         return(operand_1 / operand_2);
     }
-
-
-    public static void main(String[] args){
-        float operand_1 = 10;
-        float operand_2 = 5;
-        Calculator calc = new Calculator();
-        float add_result = calc.addition(operand_1, operand_2);
-        System.out.println("Result of Addition is: " + add_result);
-        float sub_result = calc.substraction(operand_1, operand_2);
-        System.out.println("Result of Substraction is: " + sub_result);
-        float mul_result = calc.multiplication(operand_1, operand_2);
-        System.out.println("Result of Multiplication is: " + mul_result);
-        float div_result = calc.division(operand_1, operand_2);
-        System.out.println("Result of Division is: " + div_result);
+    float square(float operand_1){
+        return(operand_1*operand_1);
     }
+
+    public static void main(String[] args) {
+        Calculator calc=new Calculator();
+        float operand_1 = 8;
+        float operand_2 = 4;
+       float add_result = calc.addition(operand_1, operand_2);
+       System.out.println("Addition="+add_result);
+       float sub_result = calc.substraction(operand_1, operand_2);
+       System.out.println("Substraction="+sub_result);
+       float mult_result = calc.multiplication(operand_1, operand_2);
+       System.out.println("Multiplication="+mult_result);
+       float div_result = calc.division(operand_1, operand_2);
+       System.out.println("Division="+div_result);
+       float sq_result = calc.square(operand_1);
+       System.out.println("Squared="+sq_result);
+
+       float square_result = calc.square(2);
+       System.out.println("Squared no.="+square_result);
+       float cube_result= calc.cube(5);
+       System.out.println("Cube no.="+cube_result);
+       float mod_result= calc.modulus(10, 20);
+       System.out.println("Mod="+mod_result);
+    }
+
 }
